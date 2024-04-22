@@ -1,0 +1,96 @@
+
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SokchoBadaBatang';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_1@1.0/SokchoBadaBatang.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'seolleimcool-SemiBold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/seolleimcool-SemiBold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ----- MainPage ----- */
+#home-main-section-top {
+  font-family: 'seolleimcool-SemiBold';
+  padding-top: 40px;
+  background: linear-gradient(45deg, #46e0ba, #76d95a);
+  
+}
+
+#home-main-section-top #home-main-top {
+  width: 1024px;
+  height: 760px;
+  margin: 0 auto;
+  position: relative;
+  color: white
+  
+  
+}
+
+#home-main-section-top .home-main-title {
+  font-size: 54px;
+  font-weight: 700;
+  line-height: 73px;
+  padding-top: 200px;
+  margin-bottom: 3.2rem;
+  letter-spacing: -2%;
+}
+
+#home-main-section-top .service-desc {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: white;
+}
+
+#home-main-section-top .home-main-image-top {
+  position: absolute;
+  right: -40px;
+  bottom: 50px;
+  width: 70%;
+  height: 70%;
+  background-repeat: no-repeat;
+  background-size: 565px 353px;
+}
+
+#login-buttons {
+  margin-top: 20px;
+}
+
+#login-buttons .fixed-download-button .fixed-download-text {
+  display: inline-block;
+  color: #46e0ba;
+  font-size: 16px;
+  font-weight: 700;
+  vertical-align: middle;
+  line-height: 28px;
+}
+
+#login-buttons .fixed-download-button {
+  width: 180px;
+  height: 56px;
+  border-radius: 10px;
+  background-color: white;
+  box-sizing: border-box;
+  text-decoration: none;
+  padding: 14px 2rem;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  margin-right: 1rem;
+  line-height: 30px;
+  font-size: 25px;
+  font-family: 'Pretendard-Regular';
+}
+/* ----- MainPage ----- */
