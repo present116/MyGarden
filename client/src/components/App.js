@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 
 import MainPage from './views/MainPage/MainPage';
+import RegisterPage from './views/RegisterPage/RegisterPage';
 
 function App(){
   
@@ -17,6 +18,7 @@ function App(){
         }
         <Routes>
           <Route exact path="/" element={<MainPage/>} />
+          <Route exact path="/register" element={RegisterPage} />
         </Routes>
       </div>
     </BrowserRouter>
