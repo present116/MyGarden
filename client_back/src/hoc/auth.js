@@ -3,9 +3,15 @@ import { useDispatch } from 'react-redux'
 import { auth } from '../_actions/user_action'
 import { useNavigate } from 'react-router-dom'
 
-export default function AuthenticationCheck(SpecificComponent, option, adminRoute = null) {
-    
+export default function(SpecificComponent, option, adminRoute = null) {
+
+    // option == null -> 아무나 출입이 가능한 페이지
+    // true -> 로그인한 유저만 출입이 가능한 페이지
+    // false -> 로그인한 유저는 출입 불가능한 페이지
+
+
     function AuthenticationCheck() {
+        
         const dispatch = useDispatch();
         const navigate = useNavigate();
 
@@ -29,7 +35,9 @@ export default function AuthenticationCheck(SpecificComponent, option, adminRout
                     }
                 })
         }, [])
-        return <SpecificComponent />
+        return (
+            <SpecificComponent></SpecificComponent>
+        )
     }
-    return AuthenticationCheck;
+    return <AuthenticationCheck />
 }
