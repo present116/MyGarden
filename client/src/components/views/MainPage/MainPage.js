@@ -17,7 +17,7 @@ function MainPage() {
                         <a target="_blank" class="login-button">
                             <div class="login-text">로그인</div>
                         </a>
-                        <a class="login-button">
+                        <a href="/register" class="login-button">
                             <div class="login-text">회원가입</div>
                         </a>
                     </div>

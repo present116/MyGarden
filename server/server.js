@@ -18,6 +18,7 @@ app.use(bodyParser.json()) // application/json 데이터를 분석해서 가져�
 app.use(cookieParser())
 app.use(cors());
 
+
 app.post('/api/users/auth',auth, (req, res)=>{
   res.status(200).json({
     _id: req.user._id,

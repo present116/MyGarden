@@ -56,11 +56,15 @@ function RegisterPage() {
 
 
     return (
+        
         <div className="container">
             <div className="inner">
                 <div className="content">
                     <form id="join_form" method="post" action="/register" className="form">
                         <div className="form_content">
+
+                            <h1 class="tit_header">독서의 정원</h1>
+                            <h3 class="tit_sub">독서의 정원에 오신걸 환영합니다. <br />회원가입 하시면 더 많은 서비스를 이용하실 수 있습니다.</h3>
                             <div className="form_section">
                                 <div className="form_list">
                                     <div className="form_item user" id="divId">
@@ -89,4 +93,4 @@ function RegisterPage() {
 
 }
 
-export default Auth(RegisterPage, null)
+export default RegisterPage
