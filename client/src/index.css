@@ -187,6 +187,13 @@ color: #fff;
   height: 30px
 }
 
+.form_item.user:has(.err)::before {
+  background-position: -310px -96px;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px
+}
+
 .form_item.lock::before {
   background-position: -310px 0;
   background-repeat: no-repeat;
@@ -194,13 +201,26 @@ color: #fff;
   height: 30px
 }
 
-.form_item.email::before {
-  background-position: -96px -296px;
+.form_item.lock:has(.err)::before {
+  background-position: -310px -32px;
   background-repeat: no-repeat;
   width: 30px;
   height: 30px
 }
 
+.form_item.email::before {
+  background-position: -96px -296px;;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px
+}
+
+.form_item.email:has(.err)::before {
+  background-position: -310px -256px;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px
+}
 
 .form_item::after {
   position: absolute;
