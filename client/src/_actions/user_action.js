@@ -15,6 +15,7 @@ export function registerUser(dataToSubmit) {
     const request = axios.post('/api/users/register', dataToSubmit)
         .then(res => res.data)
 
+    console.log(request);
     return {
         type: REGISTER_USER,
         payload : request

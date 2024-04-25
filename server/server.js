@@ -9,9 +9,10 @@ const { User } = require('./models/User')
 const { auth } = require('./middleware/auth')
 
 const mongoose = require('mongoose')
-mongoose.connect(config.mongoURI, {})
-  .then((() => console.log('MongoDB connected...')))
-  .catch(err => console.log('MongoDB not connected!'))
+mongoose.connect(config.mongoURI, {
+  useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false
+}).then(() => console.log('MongoDB Connected...'))
+  .catch(err => console.log(err))
 
 app.use(bodyParser.urlencoded({ extended: true })) // application/x-www-form-urlencoded 데이트럴 분석해서 가져올 수 있다.
 app.use(bodyParser.json()) // application/json 데이터를 분석해서 가져올 수 있다.
@@ -35,8 +36,9 @@ app.post('/api/users/auth',auth, (req, res)=>{
 
 
 app.post('/api/users/register', async (req, res) => {
-  const user = new User(req.body);
 
+  const user = new User(req.body);
+  
   await user.save()
     .then(()=>{
       res.status(200).json({
