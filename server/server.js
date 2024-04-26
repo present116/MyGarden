@@ -37,17 +37,29 @@ app.post('/api/users/auth',auth, (req, res)=>{
 
 app.post('/api/users/register', async (req, res) => {
 
-  const user = new User(req.body);
-  
-  await user.save()
-    .then(()=>{
-      res.status(200).json({
-        success: true
+  await User.findOne({email: req.body.email}, (err, user) => {
+    
+    console.log(user);
+    console.log(req.body.email);
+    
+    if(!user){
+      const user = new User(req.body);
+      user.save()
+      .then(()=>{
+        res.status(200).json({
+          success: true
+        })
       })
-    })
-    .catch((err) => {
-      res.json({success: false, err})
-    })
+      .catch((err) => {
+        res.json({success: false, err})
+      })
+    }else{
+      return res.status(200)
+      .json({success: "dupl", msg : "사용할 수 없는 이메일 입니다. 다른 이메일을 입력해 주세요."})
+    }
+  })
+
+ 
 })
 
 

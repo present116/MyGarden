@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { registerUser } from '../../../_actions/user_action' // action은 따로 모아두기
-import { useNavigate } from 'react-router-dom'
+import { createRoutesFromElements, useNavigate } from 'react-router-dom'
 
 function RegisterPage() {
     const dispatch = useDispatch();
@@ -88,11 +88,16 @@ function RegisterPage() {
 
         dispatch(registerUser(body))
             .then(res => {
-                if (res.payload.success) {
+                
+                if(res.payload.success === "dupl"){
+                    setEmailErr(true); 
+                    setIdMsg(res.payload.msg);
+                } else if (res.payload.success) {
                     alert("회원가입 성공하였습니다")
                     navigate("/")
-                } else {
-                    alert("실패")
+                } 
+                else {
+                    alert("회원가입이 실패되었습니다. 다시 시도해 주세요.")
                 }
             })
 
