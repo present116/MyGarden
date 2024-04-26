@@ -16,6 +16,7 @@ function RegisterPage() {
     const [PasswordErr, setPasswordErr] = useState("");
     const [ConfirmPwErr, setConfirmPwErr] = useState("");
     const [NameErr, setNameErr] = useState("");
+    const [IdMsg, setIdMsg] = useState("")
 
 
     const onEmailHandler = (event) => {
@@ -24,6 +25,7 @@ function RegisterPage() {
         const pattern=/^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z]?)*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
         if(!pattern.test(event.currentTarget.value)){
             setEmailErr(true);       
+            setIdMsg('5~20자의 영문 소문자, 숫자와 특수기호(_),(-)만 사용 가능합니다.');
         }else{
             setEmailErr(false);       
         }
@@ -32,9 +34,10 @@ function RegisterPage() {
 
     const onNameHandler = (event) => {
         setName(event.currentTarget.value);
-        const pattern = /^[a-zA-Zㄱ-힣][a-zA-Zㄱ-힣 ]*$/;
+        const pattern = /^[가-힣a-zA-Z]+$/;
         if(!pattern.test(event.currentTarget.value)){
             setNameErr(true);       
+            setIdMsg('한글, 영문 대/소문자를 사용해 주세요. (특수기호, 공백 사용 불가)');
         }else{
             setNameErr(false);       
         }
@@ -46,6 +49,7 @@ function RegisterPage() {
         const pattern =  /^(?=.*[a-zA-z])(?=.*[0-9])(?=.*[$`~!@$!%*#^?&\\(\\)\-_=+]).{8,16}$/
         if(!pattern.test(event.currentTarget.value)){
             setPasswordErr(true);       
+            setIdMsg('8~16자의 영문 대/소문자, 숫자, 특수문자를 사용해 주세요.');
         }else{
             setPasswordErr(false);       
         }
@@ -56,7 +60,13 @@ function RegisterPage() {
 
         const pattern = /^(?=.*[a-zA-z])(?=.*[0-9])(?=.*[$`~!@$!%*#^?&\\(\\)\-_=+]).{8,16}$/
         if(!pattern.test(event.currentTarget.value)){
-            setConfirmPwErr(true);       
+            setConfirmPwErr(true);    
+            if (Password !== ConfirmPassword) {
+                setIdMsg('비밀번호와 비밀번호 확인은 같아야 합니다.');
+            }else{
+                setIdMsg('8~16자의 영문 대/소문자, 숫자, 특수문자를 사용해 주세요.');
+            }   
+            
         }else{
             setConfirmPwErr(false);       
         }
@@ -67,7 +77,7 @@ function RegisterPage() {
         event.preventDefault();
 
         if (Password !== ConfirmPassword) {
-            return alert("비밀번호와 비밀번호 확인은 같아야 합니다");
+            return alert("비밀번호와 비밀번호 확인은 같아야 합니다.");
         }
 
         let body = {
@@ -122,6 +132,7 @@ function RegisterPage() {
                                         value={Name} onChange={onNameHandler} maxLength="40" />
                                     </div>
                                 </div>
+                                <div className = {[EamilErr || PasswordErr || ConfirmPwErr || NameErr ? 'error_text' : '', 'item_style'].join(" ")} style={{display: EamilErr || PasswordErr || ConfirmPwErr || NameErr ? 'block' : 'none'}}>{IdMsg} </div>
                             </div>
                         </div>
                         <div className="btn_submit_wrap" id="divBtnAuth">

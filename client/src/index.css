@@ -100,7 +100,6 @@
 .container {
   position: relative;
   height: 100%;
-  font-size: 0;
 }
 
 /* ----- RegisterPage ----- */
@@ -321,4 +320,11 @@ button {
   word-break: keep-all;
   word-wrap: break-word;
   font-family: 'Pretendard-Regular';
+}
+
+.error_text {
+  margin: 10px 4px 0;
+  font-size: 13px;
+  line-height: 18px;
+  color: #ff3f3f;
 }
