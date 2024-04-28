@@ -8,6 +8,7 @@ import {
 import MainPage from './views/MainPage/MainPage';
 import RegisterPage from './views/RegisterPage/RegisterPage';
 import LoginPage from './views/LoginPage/LoginPage';
+import HomePage from './views/HomePage/HomePage';
 
 function App(){
   
@@ -21,6 +22,7 @@ function App(){
           <Route exact path="/" element={<MainPage/>} />
           <Route exact path="/register" element={<RegisterPage/>} />
           <Route exact path="/login" element={<LoginPage/>} />
+          <Route exact path="/home" element={<HomePage/>} />
         </Routes>
       </div>
     </BrowserRouter>

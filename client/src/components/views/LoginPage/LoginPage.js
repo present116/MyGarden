@@ -4,7 +4,7 @@ import { loginUser } from '../../../_actions/user_action' // action은 따로 �
 import { createRoutesFromElements, useNavigate } from 'react-router-dom'
 
 function RegisterPage() {
-    
+    const navigate = useNavigate();
     const dispatch = useDispatch();
 
     const [Email, setEmail] = useState("");
@@ -59,6 +59,7 @@ function RegisterPage() {
                     alert(res.payload.msg);
                 } else if (res.payload.loginSuccess) {
                     alert("로그인에 성공하였습니다")
+                    navigate("/home")
                 } 
             })
 
