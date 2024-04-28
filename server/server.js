@@ -34,13 +34,12 @@ app.post('/api/users/auth',auth, (req, res)=>{
 })
 
 
-
+/**
+ * 회원가입
+ */
 app.post('/api/users/register', async (req, res) => {
 
   await User.findOne({email: req.body.email}, (err, user) => {
-    
-    console.log(user);
-    console.log(req.body.email);
     
     if(!user){
       const user = new User(req.body);
@@ -57,10 +56,38 @@ app.post('/api/users/register', async (req, res) => {
       return res.status(200)
       .json({success: "dupl", msg : "사용할 수 없는 이메일 입니다. 다른 이메일을 입력해 주세요."})
     }
-  })
-
- 
+  }) 
 })
+
+
+/**
+ * 로그인
+ */
+app.post('/api/users/login', (req, res) => {
+ 
+  User.findOne({email: req.body.email}, (err, user) => {
+    if(!user) {
+      return res.json({
+        loginSuccess : 'empty',
+        msg: "옳바르지 않은 이메일 입니다."
+      })
+    }
+    
+    user.comparePassword(req.body.password, (err, isMatch) => {
+      if(!isMatch) {
+        return res.json({loginSuccess: 'pwErr', msg: "비밀번호가 옳바르지 않습니다."})
+      }
+      user.generateToken((err, userToken) => {
+        if(err) return res.status(400). send(err);
+
+        res.cookie("x_auth", userToken.user_token)
+          .status(200)
+          .json({loginSuccess: true, userId: userToken.user_id})
+      })
+    })
+  })
+})
+
 
 
 app.listen(port, () => console.log(`app listening on port ${port}!`))

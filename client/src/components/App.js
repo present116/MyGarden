@@ -7,6 +7,7 @@ import {
 
 import MainPage from './views/MainPage/MainPage';
 import RegisterPage from './views/RegisterPage/RegisterPage';
+import LoginPage from './views/LoginPage/LoginPage';
 
 function App(){
   
@@ -19,6 +20,7 @@ function App(){
         <Routes>
           <Route exact path="/" element={<MainPage/>} />
           <Route exact path="/register" element={<RegisterPage/>} />
+          <Route exact path="/login" element={<LoginPage/>} />
         </Routes>
       </div>
     </BrowserRouter>

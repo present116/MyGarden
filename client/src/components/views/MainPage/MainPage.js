@@ -14,7 +14,7 @@ function MainPage() {
                         독서 기록을 사람들과 공유 하세요
                     </p>
                     <div id="login-buttons">
-                        <a target="_blank" class="login-button">
+                        <a href="/login" class="login-button">
                             <div class="login-text">로그인</div>
                         </a>
                         <a href="/register" class="login-button">
