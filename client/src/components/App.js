@@ -22,7 +22,7 @@ function App(){
         <Routes>
           <Route exact path="/" element={<MainPage/>} />
           <Route exact path="/register" element={Auth(RegisterPage, false)} />
-          <Route exact path="/login" element={Auth(LoginPage, false)} />
+          <Route exact path="/login" element={Auth(LoginPage, false, 'login')} />
           <Route exact path="/home" element={Auth(HomePage, false)} />
         </Routes>
       </div>
