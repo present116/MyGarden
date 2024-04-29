@@ -69,7 +69,7 @@ router.post('/register', async (req, res) => {
   
           res.cookie("x_auth", token.token)
             .status(200)
-            .json({loginSuccess: true, userId: token.user_id, isAuth: true})
+            .json({loginSuccess: true, userId: token.user_id})
         })
       })
     })
