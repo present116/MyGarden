@@ -74,5 +74,14 @@ router.post('/register', async (req, res) => {
       })
     })
   })
+
   
-  module.exports = router;
+  router.post('/user', (req, res) => {
+    
+    User.findOne({email: req.body.email}, (err, user) => {
+      res.status(200)
+        .json({success : true, user: user})
+    })
+  })
+
+module.exports = router;

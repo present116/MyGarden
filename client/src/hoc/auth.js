@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { useDispatch } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import { auth } from '../_actions/user_action'
 import { useNavigate } from 'react-router-dom'
 
@@ -7,6 +7,9 @@ import { useNavigate } from 'react-router-dom'
 export default function (SpecificComponent, option, adminRoute = null) {
     
     function AuthenticationCheck(props) {
+
+        let user = useSelector(state => state.user);
+        
         const dispatch = useDispatch();
         const navigate = useNavigate();
 
@@ -33,7 +36,7 @@ export default function (SpecificComponent, option, adminRoute = null) {
                     }
                 })
         }, [])
-        return (<SpecificComponent />)
+        return (<SpecificComponent {...props} user={user}/>)
     }
 
     return <AuthenticationCheck />
