@@ -4,6 +4,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import Auth from "../hoc/auth";
 
 import MainPage from './views/MainPage/MainPage';
 import RegisterPage from './views/RegisterPage/RegisterPage';
@@ -20,9 +21,9 @@ function App(){
         }
         <Routes>
           <Route exact path="/" element={<MainPage/>} />
-          <Route exact path="/register" element={<RegisterPage/>} />
-          <Route exact path="/login" element={<LoginPage/>} />
-          <Route exact path="/home" element={<HomePage/>} />
+          <Route exact path="/register" element={Auth(RegisterPage, false)} />
+          <Route exact path="/login" element={Auth(LoginPage, false)} />
+          <Route exact path="/home" element={Auth(HomePage, false)} />
         </Routes>
       </div>
     </BrowserRouter>

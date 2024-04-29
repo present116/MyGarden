@@ -62,12 +62,14 @@ router.post('/register', async (req, res) => {
         if(!isMatch) {
           return res.json({loginSuccess: 'pwErr', msg: "비밀번호가 옳바르지 않습니다."})
         }
-        user.generateToken((err, userToken) => {
+
+        user.isAuth = true;
+        user.generateToken((err, token) => {
           if(err) return res.status(400). send(err);
   
-          res.cookie("x_auth", userToken.user_token)
+          res.cookie("x_auth", token.token)
             .status(200)
-            .json({loginSuccess: true, userId: userToken.user_id})
+            .json({loginSuccess: true, userId: token.user_id, isAuth: true})
         })
       })
     })

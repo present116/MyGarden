@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux'
 import { loginUser } from '../../../_actions/user_action' // action은 따로 모아두기
 import { createRoutesFromElements, useNavigate } from 'react-router-dom'
 
-function RegisterPage() {
+function RegisterPage(props) {
     const navigate = useNavigate();
     const dispatch = useDispatch();
 

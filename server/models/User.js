@@ -60,6 +60,7 @@ userSchema.methods.comparePassword = function(plainPassword, cb) {
 userSchema.methods.generateToken = function(cb) {
     var user = this
     var token = jwt.sign(user._id.toJSON(), 'secretToken') // 토큰을 id값으로 만든다
+    
     user.token = token
     user.save()
         .then(()=>{
@@ -74,8 +75,9 @@ userSchema.methods.generateToken = function(cb) {
 userSchema.statics.findByToken = function(token, cb) {
     // 복화화 하는 로직
     var user = this;
+    
     jwt.verify(token, 'secretToken', function(err, decoded) { 
-
+        
         user.findOne({"_id" : decoded, "token" : token})
         .then(user => {
             cb(null, user)
