@@ -31,8 +31,8 @@ export function loginUser(dataToSubmit) {
     }
 }
 
-export function getUser(dataToSubmit) {
-    const request = axios.post('/api/users/user', dataToSubmit)
+export function getUser() {
+    const request = axios.post('/api/users/user')
         .then(res => res.data)
 
     return {

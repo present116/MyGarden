@@ -76,9 +76,8 @@ router.post('/register', async (req, res) => {
   })
 
   
-  router.post('/user', (req, res) => {
-    
-    User.findOne({email: req.body.email}, (err, user) => {
+  router.post('/user', auth, (req, res) => {
+    User.findOne({email: req.user.email}, (err, user) => {
       res.status(200)
         .json({success : true, user: user})
     })
