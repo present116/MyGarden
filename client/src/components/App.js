@@ -11,6 +11,8 @@ import RegisterPage from './views/RegisterPage/RegisterPage';
 import LoginPage from './views/LoginPage/LoginPage';
 import HomePage from './views/HomePage/HomePage';
 
+import BookListPage from './views/BookPage/BookListPage';
+
 function App(){
   
   return (
@@ -24,6 +26,7 @@ function App(){
           <Route exact path="/register" element={<RegisterPage/>} />
           <Route exact path="/login" element={Auth(LoginPage, false, 'login')} />
           <Route exact path="/home" element={Auth(HomePage, false)} />
+          <Route exact path="/book/list" element={Auth(BookListPage, false)} />
         </Routes>
       </div>
     </BrowserRouter>

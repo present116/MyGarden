@@ -26,7 +26,7 @@ function HomePage() {
         <section id="home-page-section-top">
             <div id="home-page-top">
                 <div class="home-page-desc">
-                    <h1 class="home-page-title"><span class="shadow">{Name}</span>의 정원<br/>에 오신걸 환영합니다 🤗</h1>
+                    <h1 class="home-page-title"><span class="shadow">{Name}</span>의 정원<br/>에 오신걸 환영합니다 &#128075;</h1>
                 </div>
             </div>
         </section>
@@ -37,7 +37,7 @@ function HomePage() {
           <div id="shortcutArea" class="shortcut_area" aria-label="주요 서비스">
             <ul class="shortcut_list">
               <li class="shortcut_item">
-                  <span class="service_name">나의 식물</span>
+                  <span class="service_name"><a href="/book/list">나의 식물</a></span>
               </li>
               <li class="shortcut_item">
                 <span class="service_name">탐색</span>
