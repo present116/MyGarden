@@ -27,6 +27,20 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Dovemayo_gothic';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.1/Dovemayo_gothic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'KCCChassam';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCCChassam.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* ----- MainPage ----- */
 #home-main-section-top {
   font-family: 'seolleimcool-SemiBold';
@@ -385,7 +399,7 @@ button {
   z-index: 120;
   position: relative;
   height: 156px;
-  padding: 70px 0 42px;
+  padding: 50px 0 42px;
 }
 
 #header .shortcut_area {
@@ -407,6 +421,7 @@ button {
 }
 
 #header .shortcut_list .service_name {
+  font-family: 'KCCChassam';
   white-space: nowrap;
   margin: 0 auto;
   line-height: 20px;
