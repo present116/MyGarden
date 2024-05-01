@@ -22,7 +22,6 @@ function HomePage() {
 
   return (
     <div>
-      
       <section id="home-page-section-top">
           <div id="home-page-top">
               <div class="home-page-desc">
@@ -33,7 +32,25 @@ function HomePage() {
               </div> */}
           </div>
       </section>
-
+      <div id="header" role="banner"> 
+        <div id="shortcutArea" class="shortcut_area" aria-label="주요 서비스">
+          <ul class="shortcut_list">
+            <li class="shortcut_item">
+                <span class="service_name">나의 식물</span>
+            </li>
+            <li class="shortcut_item">
+              <span class="service_name">탐색</span>
+            </li>
+            <li class="shortcut_item">
+              <span class="service_name">북워크</span>
+            </li>
+            <li class="shortcut_item">
+              <span class="service_name">설정</span>
+            </li>
+          </ul>
+        </div>
+        
+      </div>
     </div>  
     
   ) 
