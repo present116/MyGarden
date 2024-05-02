@@ -21,6 +21,6 @@ app.use(cors());
 
 
 app.use('/api/users', require('./routes/users'));
-
+app.use('/api/books', require('./routes/books'));
 
 app.listen(port, () => console.log(`app listening on port ${port}!`))

@@ -1,13 +1,18 @@
 import React, {useEffect, useState} from 'react'; 
 import { useDispatch } from 'react-redux'
-import { getUser } from '../../../_actions/user_action' // action은 따로 모아두기
+import { getUser } from '../../../_actions/user_action' 
+import { getBookList } from '../../../_actions/book_action'
+
 
 function BookListPage() {
   const dispatch = useDispatch();
   const [Name, setName] = useState("");
+  
 
   useEffect(() => {
-    getUserData()
+    return () => {
+      getUserData()
+    }
   }, [])
 
   const getUserData = async () => {
@@ -15,6 +20,14 @@ function BookListPage() {
       .then(res=> {
         if (res.payload.success) {
             setName(res.payload.user.name);
+
+            dispatch(getBookList({email: res.payload.user.email})) 
+              .then(res => {
+                if(res.payload.success === 'empty'){
+                  
+                }
+              })
+              
           }
       })
   }
