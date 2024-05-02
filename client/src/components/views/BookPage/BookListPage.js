@@ -2,6 +2,9 @@ import React, {useEffect, useState} from 'react';
 import { useDispatch } from 'react-redux'
 import { getUser } from '../../../_actions/user_action' 
 import { getBookList } from '../../../_actions/book_action'
+import TableSetting from './TableSetting'
+import { Link } from "react-router-dom"
+
 
 
 function BookListPage() {
@@ -32,6 +35,8 @@ function BookListPage() {
       })
   }
 
+  
+
   return (
     <div>
       <div id="book-page">
@@ -42,8 +47,11 @@ function BookListPage() {
                 </div>
             </div>
         </section>
+        <div>
+          <button class="book-add"><Link to="/add">추가</Link></button>
+        </div>
         <div className="book-page-list">
-          
+          {/* <TableSetting /> */}
         </div>
         </div>
     </div>  
