@@ -1,6 +1,6 @@
 import axios from "axios";
 import { LOGIN_USER, REGISTER_USER, AUTH_USER} from './types'
-
+import config from '../config/key';
 
 export function getBookList() {
     const request = axios.get('/api/books/list')
@@ -10,4 +10,24 @@ export function getBookList() {
         type: LOGIN_USER,
         payload: request
     }
+}
+
+export async function onSearchBtn(Search) {
+    const query = Search;
+    const api = '/v1/search/book.json';
+    const url = api + "?query=" + query;
+
+    const result = await axios.get(url , {
+        headers: {
+            'X-Naver-Client-Id': config.clientId,
+            'X-Naver-Client-Secret' : config.clientSecret
+        },
+    });
+ 
+    
+    if (result.status !== 200) {
+        throw new Error("API ERRPR");
+    }
+    
+    console.log(result.data);
 }
