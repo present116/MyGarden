@@ -26,7 +26,7 @@ function HomePage() {
         <section id="home-page-section-top">
             <div id="home-page-top">
                 <div class="home-page-desc">
-                    <h1 class="home-page-title"><span class="shadow">{Name}</span>의 정원<br/>에 오신걸 환영합니다 &#128075;</h1>
+                    <h1 class="home-page-title"><span class="shadow">{Name}</span>님의 정원<br/>에 오신걸 환영합니다 &#128075;</h1>
                 </div>
             </div>
         </section>

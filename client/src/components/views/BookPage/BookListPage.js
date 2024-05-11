@@ -43,7 +43,7 @@ function BookListPage() {
         <section id="home-page-section-top">
             <div id="home-page-top">
                 <div class="home-page-desc">
-                    <h1 class="home-page-title"><span class="shadow">{Name}</span>의 나뭇잎에<br/>새긴 문장을 볼까요? &#127807;</h1>
+                    <h1 class="home-page-title"><span class="shadow">{Name}</span>님의 나뭇잎에<br/>새긴 문장을 볼까요? &#127807;</h1>
                 </div>
             </div>
         </section>

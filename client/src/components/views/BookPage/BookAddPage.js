@@ -5,10 +5,37 @@ import { getBookList } from '../../../_actions/book_action'
 import { Link } from "react-router-dom"
 
 function BookAddPage() {
+    const dispatch = useDispatch();
+    const [Name, setName] = useState("");
     
+
+    useEffect(() => {
+        return () => {
+            getUserData()
+        }
+    }, [])
+
+    const getUserData = async () => {
+        await dispatch(getUser())
+        .then(res=> {
+            if (res.payload.success) {
+                setName(res.payload.user.name);
+            }
+        })
+    }
 
     return (
         <div>
+            <div id="book-page">
+                <section id="home-page-section-top">
+                    <div id="home-page-top">
+                        <div class="home-page-desc">
+                            <h1 class="home-page-title"><span class="shadow">{Name}</span>님<br/>나뭇잎에 책을 등록해 보세요 &#128082;</h1>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
             <div class="search-head">
                 <div class="search-box">
                     <div class="search-btn">
@@ -22,6 +49,7 @@ function BookAddPage() {
                 </div>
             </div>
         </div>
+        
     )
 }
 
