@@ -48,7 +48,7 @@ function BookListPage() {
             </div>
         </section>
         <div>
-          <button class="book-add"><Link to="/add">추가</Link></button>
+          <button class="book-add"><Link to="/book/add">추가</Link></button>
         </div>
         <div className="book-page-list">
           {/* <TableSetting /> */}

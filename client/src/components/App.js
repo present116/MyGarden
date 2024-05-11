@@ -12,6 +12,7 @@ import LoginPage from './views/LoginPage/LoginPage';
 import HomePage from './views/HomePage/HomePage';
 
 import BookListPage from './views/BookPage/BookListPage';
+import BookAddPage from './views/BookPage/BookAddPage';
 
 function App(){
   
@@ -27,6 +28,7 @@ function App(){
           <Route exact path="/login" element={Auth(LoginPage, false, 'login')} />
           <Route exact path="/home" element={Auth(HomePage, false)} />
           <Route exact path="/book/list" element={Auth(BookListPage, false)} />
+          <Route exact path="/book/add" element={Auth(BookAddPage, false)} />
         </Routes>
       </div>
     </BrowserRouter>

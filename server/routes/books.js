@@ -20,4 +20,9 @@ router.get('/list', (req, res)=>{
         })
 })
 
+router.get('/add' , (req, res) => {
+    
+    
+})
+
 module.exports = router;
