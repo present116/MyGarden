@@ -5,10 +5,20 @@ import { TableContext } from './TableSetting';
 
 const Table = memo(() => {
   const { tableData } = useContext(TableContext);
-  return (
+  
+  if(tableData !== undefined){
+    return (
     <table>
-      {Array(tableData.length).fill().map((tr, i) => <Tr rowIndex={i} />)}
+
+      {tableData.forEach((d, i)=>{
+        console.log('D@@@@@', d);
+        <Tr data={d} />
+      })}
     </table>
+    )
+  }
+  return (
+   <div>ㄴㅇㄹㄴㅇㄹㅇㄴㄹㄹㅇ</div> 
   )
 });
 

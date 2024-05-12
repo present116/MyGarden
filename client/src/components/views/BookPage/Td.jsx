@@ -3,23 +3,26 @@ import { CREATE, READ, UPDATE, DELETE, TableContext } from './TableSetting';
 
 
 
-const Td = memo(({ rowIndex, cellIndex}) => {
+const Td = memo(({ th, data}) => {
   const { tableData, dispatch } = useContext(TableContext);
 
-  const onClickTd = useCallback(() => {
+  // const onClickTd = useCallback(() => {
     
-    console.log("click!!!!");
-  }, []);
+  //   console.log("click!!!!");
+  // }, []);
+  console.log("th", th)
+  console.log("data", data);
 
-  return <RealTd onClickTd={onClickTd} data={tableData[rowIndex][cellIndex]} />;
+  return <RealTd th={th} data={data} />;
 });
 
-const RealTd = memo(({ onClickTd, data}) => {
+const RealTd = memo(({ th, data}) => {
 
   return (
-    <td
-      onClick={onClickTd}
-    >{data}</td>
+    <div>
+      <th>{th}</th>
+      <td>{data}</td>
+    </div>
   )
 });
 

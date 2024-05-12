@@ -10,10 +10,12 @@ export const TableContext = createContext({
     tableData: []
   };
   
+  function initialStateSetting(d) {
+    initialState.tableData =  d;
+  }
+
   const setData = (json) => {
-    
-    const data = [];
-    return data;
+    initialState.tableData = json;
   };
 
   export const CREATE = 'CREATE';
@@ -35,29 +37,30 @@ export const TableContext = createContext({
           tableData: setData(action.json)
         };
       default:
-        return state;
+        return {
+          ...state,
+          tableData: setData(action.json)
+        };
     }
   };
 
-  const TableSetting = (json) => {
-
-    // json 변형
+  const TableSetting = (data) => {
+    initialStateSetting(data.json.items)
+    console.log(initialState)
+    const [state, dispatch] = useReducer(reducer, initialState); // state 제대로 안나옴
     
 
-
-
-    const [state, dispatch] = useReducer(reducer, initialState);
-    const { tableData } = state;
-  
+    const { tableData } = initialState // 원래 state
     const value = useMemo(() => ({ tableData, dispatch }), [tableData]);
     
+
     useEffect(() => {
         dispatch({ type: READ });
       }, []);
     
       return (
         <TableContext.Provider value={value}>
-          <Table />
+            <Table />
         </TableContext.Provider>
       );
   

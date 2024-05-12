@@ -1,16 +1,15 @@
-import React, { useContext, memo } from 'react';
+import React, { memo } from 'react';
 import Td from './Td';
 
-import { TableContext } from './TableSetting';
-
-const Tr = memo(({ rowIndex }) => {
-  const { tableData } = useContext(TableContext);
-
+const Tr = memo(({ data }) => {
+  
   return (
     <tr>
-      {tableData[0] && Array(tableData[0].length).fill().map((td, i) =>
-        <Td rowIndex={rowIndex} cellIndex={i} />
-      )}
+      여기 안들어와??
+      {Object.keys(data).forEach((d)=>{
+        console.log("d~~~", d);
+        <Td th={d} data={data[d]}></Td>
+      })}
     </tr>
   )
 });

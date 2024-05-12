@@ -29,5 +29,8 @@ export async function onSearchBtn(Search) {
         throw new Error("API ERRPR");
     }
     
-    console.log(result.data);
+    return {
+        type: LOGIN_USER,
+        payload: result.data
+    }
 }
