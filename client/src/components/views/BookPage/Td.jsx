@@ -10,9 +10,7 @@ const Td = memo(({ th, data}) => {
     
   //   console.log("click!!!!");
   // }, []);
-  console.log("th", th)
-  console.log("data", data);
-
+  
   return <RealTd th={th} data={data} />;
 });
 

@@ -46,10 +46,8 @@ export const TableContext = createContext({
 
   const TableSetting = (data) => {
     initialStateSetting(data.json.items)
-    console.log(initialState)
-    const [state, dispatch] = useReducer(reducer, initialState); // state 제대로 안나옴
     
-
+    const [state, dispatch] = useReducer(reducer, initialState); // state 제대로 안나옴
     const { tableData } = initialState // 원래 state
     const value = useMemo(() => ({ tableData, dispatch }), [tableData]);
     
