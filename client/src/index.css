@@ -1,38 +1,36 @@
-
 @font-face {
-  font-family: 'Pretendard-Regular';
-  src: url('../public/assets/font/PretendardVariable.woff2') format('woff2');
+  font-family: "Pretendard-Regular";
+  src: url("../public/assets/font/PretendardVariable.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'seolleimcool-SemiBold';
-  src: url('../public/assets/font/SEOLEIMcool.woff') format('woff');
+  font-family: "seolleimcool-SemiBold";
+  src: url("../public/assets/font/SEOLEIMcool.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'SUIT-Regular';
-  src: url('../public/assets/font/SUIT-Variable.woff2') format('woff2');
+  font-family: "SUIT-Regular";
+  src: url("../public/assets/font/SUIT-Variable.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'KCCChassam';
-  src: url('../public/assets/font/KCCChassam.woff2') format('woff2');
+  font-family: "KCCChassam";
+  src: url("../public/assets/font/KCCChassam.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
 /* ----- MainPage ----- */
 #home-main-section-top {
-  font-family: 'seolleimcool-SemiBold';
+  font-family: "seolleimcool-SemiBold";
   padding-top: 40px;
   background: linear-gradient(45deg, #46e0ba, #76d95a);
-  
 }
 
 #home-main-section-top #home-main-top {
@@ -40,9 +38,7 @@
   height: 760px;
   margin: 0 auto;
   position: relative;
-  color: white
-  
-  
+  color: white;
 }
 
 #home-main-section-top .home-main-title {
@@ -98,7 +94,7 @@
   margin-right: 1rem;
   line-height: 30px;
   font-size: 25px;
-  font-family: 'Pretendard-Regular';
+  font-family: "Pretendard-Regular";
 }
 /* ----- MainPage ----- */
 
@@ -112,8 +108,8 @@
 /* ----- RegisterPage ----- */
 @media (min-width: 768px) {
   .inner {
-      width: 500px;
-      margin: 0 auto;
+    width: 500px;
+    margin: 0 auto;
   }
 }
 
@@ -135,10 +131,10 @@
 
 @media (min-width: 768px) {
   .form_section {
-      margin-right: 20px;
-      margin-left: 20px;
-      padding-right: 0;
-      padding-left: 0;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 
@@ -161,7 +157,7 @@
   border-radius: inherit;
   border: 1px solid #c6c6c6;
   pointer-events: none;
-  content: ''
+  content: "";
 }
 
 .form_item {
@@ -178,54 +174,54 @@
   width: 100%;
   padding: 14px 0;
   border-radius: 6px;
-  border: 1px solid rgba(0, 0, 0, .05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
   background: #46e0ba;
   font-size: 18px;
   font-weight: 700;
   line-height: 22px;
-color: #fff;
+  color: #fff;
 }
 
 .form_item.user::before {
   background-position: -342px -64px;
   background-repeat: no-repeat;
   width: 30px;
-  height: 30px
+  height: 30px;
 }
 
 .form_item.user:has(.err)::before {
   background-position: -310px -96px;
   background-repeat: no-repeat;
   width: 30px;
-  height: 30px
+  height: 30px;
 }
 
 .form_item.lock::before {
   background-position: -310px 0;
   background-repeat: no-repeat;
   width: 30px;
-  height: 30px
+  height: 30px;
 }
 
 .form_item.lock:has(.err)::before {
   background-position: -310px -32px;
   background-repeat: no-repeat;
   width: 30px;
-  height: 30px
+  height: 30px;
 }
 
 .form_item.email::before {
-  background-position: -96px -296px;;
+  background-position: -96px -296px;
   background-repeat: no-repeat;
   width: 30px;
-  height: 30px
+  height: 30px;
 }
 
 .form_item.email:has(.err)::before {
   background-position: -310px -256px;
   background-repeat: no-repeat;
   width: 30px;
-  height: 30px
+  height: 30px;
 }
 
 .form_item::after {
@@ -237,27 +233,95 @@ color: #fff;
   border-radius: inherit;
   border: 1px solid #dfdfdf;
   pointer-events: none;
-  content: '';
+  content: "";
 }
 
 .form_item::before {
   position: absolute;
   top: 10px;
   left: 9px;
-  content: ''
+  content: "";
 }
 
-.admit_tab .tab .text::before, .admit_tab .tab[aria-selected=true] .text::before, .bottom_popup .benefit_item.gift::before, .bottom_popup .benefit_item.remit::before, .bottom_popup .benefit_item.touch::before, .bottom_popup .btn_area .text.logo_n::before, .bottom_popup .btn_expand .text::before, .bottom_popup .title.icon_phone::before, .btn_show.hide::before, .btn_show::before, .btn_telecom::after, .check_circle input:checked+label::before, .check_circle label::before, .check_circle.error label::before, .check_normal .link_arrow::before, .check_normal input:checked+label::before, .check_normal label::before, .check_terms .link_arrow::before, .check_terms input:checked+label::before, .check_terms label::before, .form_item.calendar.error::before, .form_item.calendar.on::before, .form_item.calendar::before, .form_item.check_box .btn_expand::before, .form_item.check_box.error .check_circle label::before, .form_item.email.error::before, .form_item.email.on::before, .form_item.email::before, .form_item.globe.error::before, .form_item.globe::before, .form_item.group.error::before, .form_item.group.on::before, .form_item.group::before, .form_item.group_type.error::before, .form_item.group_type.on::before, .form_item.group_type::before, .form_item.lock.error::before, .form_item.lock.on::before, .form_item.lock::before, .form_item.phone.error::before, .form_item.phone.on::before, .form_item.phone::before, .form_item.registration_number.error::before, .form_item.registration_number.on::before, .form_item.registration_number::before, .form_item.telecom.error::before, .form_item.telecom.on::before, .form_item.telecom::before, .form_item.user.error::before, .form_item.user.on::before, .form_item.user::before, .help_modal_wrap .btn_close::before, .help_modal_wrap .btn_expand::after, .join_link_area .link::after, .join_toggle input:checked+label::after, .join_toggle label::after, .lang_select_wrap::after, .lang_select_wrap::before, .link_certify::after, .logo_naver .link::before, .select_box::after, .welcome_wrap .main_title::before, .welcome_wrap .service_link.blog::before, .welcome_wrap .service_link.cafe::before, .welcome_wrap .service_link.home::before, .welcome_wrap .service_link.id::before, .welcome_wrap .service_link.mail::before, .welcome_wrap .service_link.shopping::before, .welcome_wrap .service_link::after {
-    background-image: url(https://ssl.pstatic.net/static/nid/join/m_sp_06_realname_48b1e603.png);
-    background-size: 372px 326px;
-    background-repeat: no-repeat;
+.admit_tab .tab .text::before,
+.admit_tab .tab[aria-selected="true"] .text::before,
+.bottom_popup .benefit_item.gift::before,
+.bottom_popup .benefit_item.remit::before,
+.bottom_popup .benefit_item.touch::before,
+.bottom_popup .btn_area .text.logo_n::before,
+.bottom_popup .btn_expand .text::before,
+.bottom_popup .title.icon_phone::before,
+.btn_show.hide::before,
+.btn_show::before,
+.btn_telecom::after,
+.check_circle input:checked + label::before,
+.check_circle label::before,
+.check_circle.error label::before,
+.check_normal .link_arrow::before,
+.check_normal input:checked + label::before,
+.check_normal label::before,
+.check_terms .link_arrow::before,
+.check_terms input:checked + label::before,
+.check_terms label::before,
+.form_item.calendar.error::before,
+.form_item.calendar.on::before,
+.form_item.calendar::before,
+.form_item.check_box .btn_expand::before,
+.form_item.check_box.error .check_circle label::before,
+.form_item.email.error::before,
+.form_item.email.on::before,
+.form_item.email::before,
+.form_item.globe.error::before,
+.form_item.globe::before,
+.form_item.group.error::before,
+.form_item.group.on::before,
+.form_item.group::before,
+.form_item.group_type.error::before,
+.form_item.group_type.on::before,
+.form_item.group_type::before,
+.form_item.lock.error::before,
+.form_item.lock.on::before,
+.form_item.lock::before,
+.form_item.phone.error::before,
+.form_item.phone.on::before,
+.form_item.phone::before,
+.form_item.registration_number.error::before,
+.form_item.registration_number.on::before,
+.form_item.registration_number::before,
+.form_item.telecom.error::before,
+.form_item.telecom.on::before,
+.form_item.telecom::before,
+.form_item.user.error::before,
+.form_item.user.on::before,
+.form_item.user::before,
+.help_modal_wrap .btn_close::before,
+.help_modal_wrap .btn_expand::after,
+.join_link_area .link::after,
+.join_toggle input:checked + label::after,
+.join_toggle label::after,
+.lang_select_wrap::after,
+.lang_select_wrap::before,
+.link_certify::after,
+.logo_naver .link::before,
+.select_box::after,
+.welcome_wrap .main_title::before,
+.welcome_wrap .service_link.blog::before,
+.welcome_wrap .service_link.cafe::before,
+.welcome_wrap .service_link.home::before,
+.welcome_wrap .service_link.id::before,
+.welcome_wrap .service_link.mail::before,
+.welcome_wrap .service_link.shopping::before,
+.welcome_wrap .service_link::after {
+  background-image: url(https://ssl.pstatic.net/static/nid/join/m_sp_06_realname_48b1e603.png);
+  background-size: 372px 326px;
+  background-repeat: no-repeat;
 }
 
 .form_item::before {
   position: absolute;
   top: 10px;
   left: 9px;
-  content: '';
+  content: "";
 }
 
 .form_item:first-of-type {
@@ -278,7 +342,10 @@ color: #fff;
   color: #222;
 }
 
-button, input, select, textarea {
+button,
+input,
+select,
+textarea {
   border-radius: 0;
   border: none;
   background: 0 0;
@@ -291,8 +358,13 @@ button, input, select, textarea {
   -webkit-text-size-adjust: none;
 }
 
-body, button, input, select, table, textarea {
-  font-family: 'Pretendard-Regular';
+body,
+button,
+input,
+select,
+table,
+textarea {
+  font-family: "Pretendard-Regular";
   font-size: 12px;
   -webkit-text-size-adjust: none;
 }
@@ -314,7 +386,7 @@ button {
   color: #191919;
   word-break: keep-all;
   word-wrap: break-word;
-  font-family: 'seolleimcool-SemiBold';
+  font-family: "seolleimcool-SemiBold";
 }
 
 .tit_sub {
@@ -326,7 +398,7 @@ button {
   color: #191919;
   word-break: keep-all;
   word-wrap: break-word;
-  font-family: 'Pretendard-Regular';
+  font-family: "Pretendard-Regular";
 }
 
 .error_text {
@@ -343,9 +415,8 @@ button {
 }
 
 #home-page-section-top {
-  font-family: 'SUIT-Regular';
+  font-family: "SUIT-Regular";
   padding-top: 40px;
-  
 }
 
 #home-page-section-top #home-page-top {
@@ -353,7 +424,7 @@ button {
   height: 100px;
   margin: 0 auto;
   position: relative;
-  color: black
+  color: black;
 }
 
 #home-page-section-top .home-page-title {
@@ -395,9 +466,8 @@ button {
 }
 
 #header .shortcut_list {
-  display:flex;
+  display: flex;
   justify-content: space-between;
-  
 }
 
 #header .shortcut_list .link_service {
@@ -407,7 +477,7 @@ button {
 }
 
 #header .shortcut_list .service_name {
-  font-family: 'KCCChassam';
+  font-family: "KCCChassam";
   white-space: nowrap;
   margin: 0 auto;
   line-height: 20px;
@@ -425,11 +495,12 @@ button {
   text-align: center;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
-a{
+a {
   color: inherit;
   text-decoration: none;
 }
@@ -464,9 +535,9 @@ a{
   border: 1px solid hsl(0, 0%, 35%);
   border-right: none;
   border-radius: 40px 0 0 40px;
-  box-shadow: inset 0 1px 2px hsla(0,0%,0%,0);
-  caret-color: hsla(0,100%,100%,0.88);
-  color: hsla(0,100%,100%,0.88);
+  box-shadow: inset 0 1px 2px hsla(0, 0%, 0%, 0);
+  /* caret-color: hsla(0,100%,100%,0.88); */
+  color: hsla(0, 100%, 100%, 0.88);
   padding: 0 4px 0 16px;
   margin-left: 32px;
   flex: 1;
@@ -493,7 +564,7 @@ a{
   align-items: center;
   justify-content: center;
 }
-.search-right-btn{
+.search-right-btn {
   display: block;
   fill: currentcolor;
 }
