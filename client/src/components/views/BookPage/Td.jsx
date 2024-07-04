@@ -1,27 +1,15 @@
-import React, { useContext, useCallback, useMemo, memo } from 'react';
-import { CREATE, READ, UPDATE, DELETE, TableContext } from './TableSetting';
+import React, { useContext, memo } from "react";
+import { TableContext } from "./TableSetting";
 
-
-
-const Td = memo(({ th, data}) => {
+const Td = memo(({ th, data }) => {
   const { tableData, dispatch } = useContext(TableContext);
-
-  // const onClickTd = useCallback(() => {
-    
-  //   console.log("click!!!!");
-  // }, []);
-  
-  return <RealTd th={th} data={data} />;
-});
-
-const RealTd = memo(({ th, data}) => {
 
   return (
     <div>
-      <th>{th}</th>
+      <td>{th}</td>
       <td>{data}</td>
     </div>
-  )
+  );
 });
 
 export default Td;
